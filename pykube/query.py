@@ -152,6 +152,8 @@ class WatchQuery(BaseQuery):
             "url": self._build_api_url(params=params),
             "stream": True,
         }
+        if self.api_obj_class.base:
+            kwargs["base"] = self.api_obj_class.base
         if self.namespace is not all_:
             kwargs["namespace"] = self.namespace
         if self.api_obj_class.version:
