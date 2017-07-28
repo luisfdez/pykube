@@ -391,6 +391,14 @@ class ReplicaSet(NamespacedAPIObject, ReplicatedMixin, ScalableMixin):
     kind = "ReplicaSet"
 
 
+class Route(NamespacedAPIObject):
+
+    version = "v1"
+    endpoint = "routes"
+    base = "/oapi"
+    kind = "Route"
+
+
 class Secret(NamespacedAPIObject):
 
     version = "v1"
